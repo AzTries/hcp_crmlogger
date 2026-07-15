@@ -12,11 +12,11 @@ An AI-first "Log Interaction Screen" for a pharma CRM's Healthcare Professional 
 - **Font:** Google Inter
 
 ### Note on model choice
-The assignment specified `gemma2-9b-it`. Groq deprecated this model on August 8, 2025, in favor of `llama-3.1-8b-instant` ([source](https://console.groq.com/docs/deprecations)). We use Groq's recommended replacement for lightweight tasks, and `llama-3.3-70b-versatile` (explicitly permitted in the assignment doc) as the main agent brain, since it's significantly more reliable at knowing when to stop calling tools.
+The assignment specified `gemma2-9b-it`. Groq deprecated this model on August 8, 2025, in favor of `llama-3.1-8b-instant` ([source](https://console.groq.com/docs/deprecations)). We use Groq's recommended replacement for lightweight tasks, and `llama-3.3-70b-versatile` as the main agent brain, since it's significantly more reliable at knowing when to stop calling tools.
 
 ## LangGraph Agent
 
-The agent is a single-node loop: an LLM bound to 6 tools, with a conditional edge that routes back to the LLM after every tool call until it decides to respond directly. Full conversation history is sent on every request, so the agent has memory across turns (e.g. "change that to Negative" correctly resolves to the interaction just discussed).
+The agent is a single-node loop: an LLM bound to 6 tools, with a conditional edge that routes back to the LLM after every tool call until it decides to respond directly. Full conversation history is sent on every request, so the agent has memory across turns.
 
 ### Tools
 
