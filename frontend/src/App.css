@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #1a1a1a;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* ---- Form ---- */
+.interaction-form {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.interaction-form h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.interaction-form label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 8px;
+  color: #444;
+}
+
+.interaction-form input,
+.interaction-form select,
+.interaction-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.interaction-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.sentiment-options {
+  display: flex;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.sentiment-options label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0;
+}
+
+.interaction-form button {
+  margin-top: 16px;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.interaction-form button:hover {
+  background: #1d4ed8;
+}
+
+/* ---- Chat Assistant ---- */
+.chat-assistant {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-assistant h2 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.chat-subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.chat-messages {
+  flex: 1;
+  min-height: 240px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.chat-placeholder {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.chat-bubble {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.chat-bubble.user {
+  background: #e0edff;
+  margin-left: 20%;
+}
+
+.chat-bubble.assistant {
+  background: #f0f0f0;
+  margin-right: 20%;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.chat-input-row button {
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---- Interactions list ---- */
+.interactions-list {
+  margin-top: 32px;
+}
+
+.interactions-list h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.interactions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.interaction-card {
+  background: white;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-size: 13px;
+}
+
+.interaction-card-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sentiment-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.sentiment-badge.positive { background: #dcfce7; color: #166534; }
+.sentiment-badge.neutral { background: #f1f5f9; color: #475569; }
+.sentiment-badge.negative { background: #fee2e2; color: #991b1b; }
+
+.ae-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.interaction-card small {
+  color: #999;
+  display: block;
+  margin-top: 8px;
+}
