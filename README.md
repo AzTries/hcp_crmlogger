@@ -2,6 +2,10 @@
 
 An AI-first "Log Interaction Screen" for a pharma CRM's Healthcare Professional (HCP) module. Field reps can log meetings with doctors either through a structured form or a conversational AI chat interface, powered by a LangGraph agent.
 
+## Live URLs
+- **Frontend UI:** [az-tries-synapse-hcp-crm-logger.vercel.app](https://az-tries-synapse-hcp-crm-logger.vercel.app)
+- **Backend API:** [synapse-backend-yh6d.onrender.com](https://synapse-backend-yh6d.onrender.com)
+
 ## Tech Stack
 
 - **Frontend:** React (Vite) + Redux Toolkit
